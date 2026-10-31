@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohamed Ali Ismail | Software Engineer</title>
+<meta name="description" content="Software engineer working with NestJS, ASP.NET Core and Angular. Computer Science graduate, Ain Shams University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2F5; --surface:#FFFFFF; --ink:#14202E; --muted:#51606F; --line:#CBD5DD;
+  --accent:#0A6C94; --accent-ink:#FFFFFF; --panel:#14202E; --panel-ink:#E8EEF3; --panel-muted:#9FB0BF; --signal:#F0B429;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --text:"Newsreader",Georgia,"Times New Roman",serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1620; --surface:#16212D; --ink:#E6EDF3; --muted:#9AAAB8; --line:#2A3846;
+    --accent:#5CC0E8; --accent-ink:#0E1620; --panel:#1B2A3A; --panel-ink:#E6EDF3; --panel-muted:#9AAAB8; --signal:#F0B429;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1620; --surface:#16212D; --ink:#E6EDF3; --muted:#9AAAB8; --line:#2A3846;
+  --accent:#5CC0E8; --accent-ink:#0E1620; --panel:#1B2A3A; --panel-ink:#E6EDF3; --panel-muted:#9AAAB8; --signal:#F0B429;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:1.125rem;line-height:1.65}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2.5rem)}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;letter-spacing:-.015em}
+
+/* top bar */
+.bar{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;font-family:var(--display);font-weight:500}
+.bar nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+.bar a{color:var(--ink);text-decoration:none}
+.bar a:hover{color:var(--accent)}
+
+/* hero */
+.hero{padding:clamp(2.5rem,8vw,6rem) 0 clamp(2.5rem,6vw,4.5rem)}
+.hero h1{font-weight:800;font-size:clamp(2.8rem,9.5vw,7rem);letter-spacing:-.035em}
+.hero .lead{max-width:36rem;font-size:clamp(1.2rem,2.4vw,1.45rem);margin:1.5rem 0 0}
+.hero .status{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.75rem;font-family:var(--display);font-weight:500;font-size:.98rem;color:var(--muted)}
+.dot{width:.7rem;height:.7rem;border-radius:50%;background:var(--signal);flex:none}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.btn{font-family:var(--display);font-weight:500;font-size:1rem;padding:.8rem 1.3rem;border-radius:6px;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent);background:transparent}
+.btn:hover{filter:brightness(1.08)}
+
+/* pipeline graphic */
+.flow{margin-top:clamp(2rem,5vw,3.5rem);border-top:2px solid var(--ink);padding-top:1.25rem}
+.flow svg{width:100%;height:auto;display:block;overflow:visible}
+.flow .n{fill:var(--surface);stroke:var(--ink);stroke-width:2}
+.flow .t{fill:var(--ink);font:500 15px var(--display)}
+.flow .s{fill:var(--muted);font:400 13px var(--text)}
+.flow .ln{stroke:var(--ink);stroke-width:2;stroke-dasharray:5 6;fill:none}
+.pulse{fill:var(--signal);stroke:var(--ink);stroke-width:2}
+
+/* sections */
+section{padding:clamp(2.5rem,6vw,4.5rem) 0;border-top:1px solid var(--line)}
+.grid{display:grid;gap:1.5rem 3rem;grid-template-columns:1fr}
+@media (min-width:820px){.grid{grid-template-columns:220px 1fr}.grid>h2{position:sticky;top:1.5rem;align-self:start}}
+h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:800}
+p{margin:0 0 1em;max-width:40rem}
+.muted{color:var(--muted)}
+
+/* featured project */
+.feature{background:var(--panel);color:var(--panel-ink);border-radius:10px;padding:clamp(1.5rem,4vw,2.5rem);margin-bottom:2.5rem}
+.feature h3{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800}
+.feature .tag{display:inline-block;background:var(--signal);color:#14202E;font-family:var(--display);font-weight:800;font-size:.9rem;padding:.2rem .6rem;border-radius:4px;margin-bottom:1rem}
+.feature p{color:var(--panel-ink)}
+.feature ul{margin:1rem 0 0;padding-left:1.1rem;max-width:42rem}
+.feature li{margin-bottom:.5rem}
+.feature .stack{margin-top:1.25rem;color:var(--panel-muted);font-family:var(--display);font-size:.95rem}
+
+/* other projects */
+.proj{padding:1.4rem 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.proj h3{font-size:1.35rem;font-weight:800;display:flex;flex-wrap:wrap;gap:.4rem .8rem;align-items:baseline}
+.proj .kind{font-family:var(--display);font-weight:500;font-size:.9rem;color:var(--muted)}
+.proj p{margin:.5rem 0 .4rem}
+.proj .stack{font-family:var(--display);font-size:.95rem;color:var(--accent);margin:0}
+.proj .repos{display:flex;gap:1.25rem;flex-wrap:wrap;margin:.6rem 0 0;font-family:var(--display);font-weight:500;font-size:.95rem}
+
+/* experience timeline */
+.tl{list-style:none;margin:0;padding:0 0 0 1.5rem;border-left:2px solid var(--ink)}
+.tl li{position:relative;padding-bottom:2.25rem}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:calc(-1.5rem - 7px);top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--ink)}
+.tl li.now::before{background:var(--signal)}
+.tl h3{font-size:1.3rem;font-weight:800}
+.tl .meta{font-family:var(--display);font-weight:500;font-size:.95rem;color:var(--muted);margin:.2rem 0 .6rem}
+.tl p{margin:0 0 .5em}
+
+/* skills */
+.skills{display:grid;gap:1.25rem 2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.skills h3{font-size:1.05rem;margin-bottom:.35rem}
+.skills p{margin:0;max-width:none}
+
+footer{padding:3rem 0 3.5rem;border-top:2px solid var(--ink)}
+footer h2{font-size:clamp(2rem,5vw,3.4rem);max-width:32rem}
+footer .mail{display:inline-block;margin-top:1.25rem;font-family:var(--display);font-weight:500;font-size:clamp(1.1rem,3vw,1.5rem)}
+footer .links{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:1rem;font-family:var(--display);font-weight:500}
+footer small{display:block;margin-top:2.5rem;color:var(--muted);font-size:.95rem}
+
+/* one motion: the pulse travels the pipeline once */
+@media (prefers-reduced-motion:no-preference){
+  .pulse{offset-path:path("M0 0 H560");animation:go 4.5s ease-in-out .4s 1 both}
+  @keyframes go{from{transform:translateX(0)}to{transform:translateX(560px)}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="bar">
+    <strong>Mohamed Ali</strong>
+    <nav aria-label="Sections">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Mohamed Ali Ismail</h1>
+      <p class="lead">I’m a software engineer who builds backend services and the interfaces on top of them, with a habit of thinking about how things get attacked.</p>
+      <div class="status"><span class="dot" aria-hidden="true"></span>Open to full-time software engineering roles</div>
+      <div class="cta">
+        <a class="btn primary" href="mailto:mohamed.ali.ismail26@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://github.com/mohamedali382">GitHub</a>
+        <a class="btn ghost" href="https://linkedin.com/in/mohamed-ali-685b87264">LinkedIn</a>
+      </div>
+
+      <div class="flow" role="img" aria-label="A request moving from a client through an API and a message queue to a worker service">
+        <svg viewBox="0 0 680 120">
+          <path class="ln" d="M70 60 H610"/>
+          <g transform="translate(0,0)">
+            <rect class="n" x="0" y="28" width="140" height="64" rx="8"/>
+            <text class="t" x="70" y="57" text-anchor="middle">Angular</text>
+            <text class="s" x="70" y="77" text-anchor="middle">client</text>
+          </g>
+          <rect class="n" x="180" y="28" width="140" height="64" rx="8"/>
+          <text class="t" x="250" y="57" text-anchor="middle">NestJS / ASP.NET</text>
+          <text class="s" x="250" y="77" text-anchor="middle">API</text>
+          <rect class="n" x="360" y="28" width="140" height="64" rx="8"/>
+          <text class="t" x="430" y="57" text-anchor="middle">RabbitMQ</text>
+          <text class="s" x="430" y="77" text-anchor="middle">queue</text>
+          <rect class="n" x="540" y="28" width="140" height="64" rx="8"/>
+          <text class="t" x="610" y="57" text-anchor="middle">Worker</text>
+          <text class="s" x="610" y="77" text-anchor="middle">service</text>
+          <circle class="pulse" cx="70" cy="60" r="8"/>
+        </svg>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="grid">
+        <h2>About</h2>
+        <div>
+          <p>I recently graduated with a B.Sc. in Computer Science from the Faculty of Computer and Information Sciences at Ain Shams University. I work across the stack with NestJS, ASP.NET Core and Angular.</p>
+          <p>Right now I’m a software engineering intern at Rabbit Mart, building backend services for a quick-commerce platform. Before that I spent a year at Geidea writing microservices for a PCI DSS compliant fintech product.</p>
+          <p>I also teach programming to students aged 8 to 18, and I led a 200-person student conference. Both taught me to explain technical ideas clearly and to get a team moving in one direction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="grid">
+        <h2>Projects</h2>
+        <div>
+          <article class="feature">
+            <span class="tag">Graduation project, A+</span>
+            <h3>LLMtron</h3>
+            <p>An automated security-testing framework that attacks LLM agents and MCP systems the way a real adversary would, then scores what got through against the OWASP LLM Top 10.</p>
+            <ul>
+              <li>Delivers adversarial prompts through five vectors: direct, MCP, RAG, memory and PDF.</li>
+              <li>Generates payloads from a curated library and a LoRA fine-tuned model, and a PAIR refinement loop improves attacks that failed.</li>
+              <li>Judges responses with a five-layer pipeline: audit-log and database diffing, plus semantic classification with MiniLM and DeBERTa.</li>
+              <li>Rates severity with a hybrid CVSS, MAESTRO and ATFAA model.</li>
+              <li>Benchmarked against Garak, PyRIT and NeMo Guardrails, with stronger coverage of RAG, MCP and multi-turn attacks.</li>
+            </ul>
+            <p class="stack">Python, FastAPI, Next.js, TypeScript, MongoDB</p>
+          </article>
+
+          <div class="proj">
+            <h3>Hospital ERP <span class="kind">Freelance</span></h3>
+            <p>A full-stack system for a hospital’s finances, clinics, rooms, departments and inventory. It handles clinic and surgery scheduling with real-time availability, plus billing, invoices, payment tracking and reporting dashboards.</p>
+            <p class="repos"><a href="https://github.com/0xbassiouny1337/HMS_Backend">Backend repo</a><a href="https://github.com/mohamedali382/HMS-frontend">Frontend repo</a></p>
+          </div>
+          <div class="proj">
+            <h3>Customer Support System <span class="kind">Full-stack</span></h3>
+            <p>Separate frontend and backend services built to split into microservices later. Services talk over HTTP and RabbitMQ queues, and the API covers authentication, notifications and support workflows.</p>
+            <p class="stack">ASP.NET Core Web API, Angular, RabbitMQ</p>
+            <p class="repos"><a href="https://github.com/mohamedali382/Customer-Support-System-Micro-services">Backend repo</a><a href="https://github.com/mohamedali382/Customer-Support---frontend">Frontend repo</a></p>
+          </div>
+          <div class="proj">
+            <h3>E-commerce website <span class="kind">Freelance</span></h3>
+            <p>A responsive store with filterable product listings, email account verification and an interactive cart, working across screen sizes.</p>
+            <p class="stack">Angular, ASP.NET</p>
+            <p class="repos"><a href="https://github.com/mohamedali382/E-commerce-Brud">Repo</a></p>
+          </div>
+          <div class="proj">
+            <h3>Digital wallet</h3>
+            <p>A secure transaction system with APIs for account creation, transfers and balance checks, JWT authentication, and transaction history with pagination and filtering.</p>
+            <p class="stack">Node.js, JWT</p>
+            <p class="repos"><a href="https://github.com/ali-ezzat1/ramora-wallet">Repo</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="grid">
+        <h2>Experience</h2>
+        <ol class="tl">
+          <li class="now">
+            <h3>Software Engineering Intern, Rabbit Mart</h3>
+            <div class="meta">Jul 2026 to present, Cairo</div>
+            <p>Building NestJS backend services for a quick-commerce platform, with work on APIs and database integration.</p>
+            <p>Part of an Agile team: feature work, code reviews, sprint planning and daily stand-ups.</p>
+          </li>
+          <li>
+            <h3>President, SCCI-CU student activity</h3>
+            <div class="meta">Sep 2025 to Jul 2026, Cairo</div>
+            <p>Led the largest student-run conference on campus: 200+ members across 10 committees and 4 technical workshops, and 9 major events delivered.</p>
+            <p>Managed partnerships with 10+ sponsors and secured over EGP 190,000 in sponsorship and in-kind support.</p>
+          </li>
+          <li>
+            <h3>Software Engineering Intern, Geidea</h3>
+            <div class="meta">Jun 2025 to May 2026, Cairo</div>
+            <p>Built ASP.NET Core and Entity Framework microservices that handle financial transactions.</p>
+            <p>Created Angular 16+ components with TypeScript and RxJS for merchant dashboards and financial reporting, on a PCI DSS compliant product.</p>
+          </li>
+          <li>
+            <h3>Programming Instructor, Go Academy</h3>
+            <div class="meta">Jun 2024 to Oct 2025, part-time, Cairo</div>
+            <p>Taught students aged 8 to 18 across three levels (Scratch, Python and project-based learning), covering web, mobile and game development.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="grid">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div><h3>Languages</h3><p>C#, TypeScript, JavaScript, SQL, C++, Python</p></div>
+          <div><h3>Backend</h3><p>NestJS, ASP.NET Core, Entity Framework, Node.js, FastAPI, RabbitMQ</p></div>
+          <div><h3>Frontend</h3><p>Angular, RxJS, Next.js, React</p></div>
+          <div><h3>Data</h3><p>SQL, MongoDB</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <h2>Let’s talk about your next engineering hire.</h2>
+    <a class="mail" href="mailto:mohamed.ali.ismail26@gmail.com">mohamed.ali.ismail26@gmail.com</a>
+    <div class="links">
+      <a href="https://github.com/mohamedali382">GitHub</a>
+      <a href="https://linkedin.com/in/mohamed-ali-685b87264">LinkedIn</a>
+    </div>
+    <small>Cairo, Egypt. Certified in React web development (DEPI, 2024).</small>
+  </footer>
+</div>
+</body>
+</html>
